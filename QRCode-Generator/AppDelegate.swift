@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import Instabug
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
+        Instabug.start(withToken: "98616ae556601b6b72101615cd3f7f9a", invocationEvent: IBGInvocationEvent.shake)
         return true
     }
 

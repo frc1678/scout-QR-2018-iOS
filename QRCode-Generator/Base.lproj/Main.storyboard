@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,44 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRCode_Generator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="muQ-DO-W66">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ih-lt-x8z">
+                                <rect key="frame" x="16" y="172" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1ih-lt-x8z" secondAttribute="height" multiplier="1:1" id="e6B-Lx-OTH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cycle Number:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp3-rt-tEm">
+                                <rect key="frame" x="16" y="35" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yfk-4J-xPR" firstAttribute="trailing" secondItem="1ih-lt-x8z" secondAttribute="trailing" constant="16" id="4H6-85-tQD"/>
+                            <constraint firstItem="1ih-lt-x8z" firstAttribute="centerY" secondItem="yfk-4J-xPR" secondAttribute="centerY" id="hxu-r4-ymn"/>
+                            <constraint firstItem="fp3-rt-tEm" firstAttribute="leading" secondItem="yfk-4J-xPR" secondAttribute="leading" constant="16" id="mwB-fS-DD8"/>
+                            <constraint firstItem="yfk-4J-xPR" firstAttribute="trailing" secondItem="fp3-rt-tEm" secondAttribute="trailing" constant="16" id="r0a-3J-j9L"/>
+                            <constraint firstItem="1ih-lt-x8z" firstAttribute="leading" secondItem="yfk-4J-xPR" secondAttribute="leading" constant="16" id="uFX-pl-gNi"/>
+                            <constraint firstItem="fp3-rt-tEm" firstAttribute="top" secondItem="yfk-4J-xPR" secondAttribute="top" constant="15" id="vWS-VA-4c9"/>
+                            <constraint firstItem="1ih-lt-x8z" firstAttribute="centerX" secondItem="yfk-4J-xPR" secondAttribute="centerX" id="wKX-gb-Ebe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yfk-4J-xPR"/>
                     </view>
+                    <connections>
+                        <outlet property="QRImageView" destination="1ih-lt-x8z" id="r4a-Hk-QQr"/>
+                        <outlet property="cycleNumberLabel" destination="fp3-rt-tEm" id="a3f-H4-fbm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
