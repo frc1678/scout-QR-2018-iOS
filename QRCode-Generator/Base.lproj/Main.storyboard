@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,12 +15,16 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRCode_Generator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Ea-LC-Djt"/>
+                        <viewControllerLayoutGuide type="bottom" id="CJY-J3-nLM"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="muQ-DO-W66">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ih-lt-x8z">
-                                <rect key="frame" x="16" y="172" width="343" height="343"/>
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1ih-lt-x8z" secondAttribute="height" multiplier="1:1" id="e6B-Lx-OTH"/>
                                 </constraints>
@@ -34,15 +38,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yfk-4J-xPR" firstAttribute="trailing" secondItem="1ih-lt-x8z" secondAttribute="trailing" constant="16" id="4H6-85-tQD"/>
-                            <constraint firstItem="1ih-lt-x8z" firstAttribute="centerY" secondItem="yfk-4J-xPR" secondAttribute="centerY" id="hxu-r4-ymn"/>
-                            <constraint firstItem="fp3-rt-tEm" firstAttribute="leading" secondItem="yfk-4J-xPR" secondAttribute="leading" constant="16" id="mwB-fS-DD8"/>
-                            <constraint firstItem="yfk-4J-xPR" firstAttribute="trailing" secondItem="fp3-rt-tEm" secondAttribute="trailing" constant="16" id="r0a-3J-j9L"/>
-                            <constraint firstItem="1ih-lt-x8z" firstAttribute="leading" secondItem="yfk-4J-xPR" secondAttribute="leading" constant="16" id="uFX-pl-gNi"/>
-                            <constraint firstItem="fp3-rt-tEm" firstAttribute="top" secondItem="yfk-4J-xPR" secondAttribute="top" constant="15" id="vWS-VA-4c9"/>
-                            <constraint firstItem="1ih-lt-x8z" firstAttribute="centerX" secondItem="yfk-4J-xPR" secondAttribute="centerX" id="wKX-gb-Ebe"/>
+                            <constraint firstAttribute="trailing" secondItem="1ih-lt-x8z" secondAttribute="trailing" constant="16" id="4H6-85-tQD"/>
+                            <constraint firstItem="1ih-lt-x8z" firstAttribute="centerY" secondItem="muQ-DO-W66" secondAttribute="centerY" id="hxu-r4-ymn"/>
+                            <constraint firstItem="fp3-rt-tEm" firstAttribute="leading" secondItem="muQ-DO-W66" secondAttribute="leading" constant="16" id="mwB-fS-DD8"/>
+                            <constraint firstAttribute="trailing" secondItem="fp3-rt-tEm" secondAttribute="trailing" constant="16" id="r0a-3J-j9L"/>
+                            <constraint firstItem="1ih-lt-x8z" firstAttribute="leading" secondItem="muQ-DO-W66" secondAttribute="leading" constant="16" id="uFX-pl-gNi"/>
+                            <constraint firstItem="fp3-rt-tEm" firstAttribute="top" secondItem="2Ea-LC-Djt" secondAttribute="bottom" constant="15" id="vWS-VA-4c9"/>
+                            <constraint firstItem="1ih-lt-x8z" firstAttribute="centerX" secondItem="muQ-DO-W66" secondAttribute="centerX" id="wKX-gb-Ebe"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="yfk-4J-xPR"/>
                     </view>
                     <connections>
                         <outlet property="QRImageView" destination="1ih-lt-x8z" id="r4a-Hk-QQr"/>

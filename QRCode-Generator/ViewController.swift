@@ -24,7 +24,8 @@ class ViewController: UIViewController {
         var QRCodeData: NSData!
         self.firebase.child("QRCode").observe(.value, with: { (snap) in
             QRCodeText = snap.value as! String
-            self.cycleNumber = Int(QRCodeText.dropLast(18))
+            let cycleNumberIndex = QRCodeText.index(of: "|")
+            self.cycleNumber = Int(QRCodeText.substring(to: cycleNumberIndex!))
             QRCodeData = QRCodeText.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)! as NSData
             
             // Generating UIImage of QRCode

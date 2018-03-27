@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,6 +14,10 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5d5-zI-T3H"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iei-UR-tAa"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,23 +28,12 @@
                                 <color key="textColor" red="0.23170065879999999" green="0.83516466619999996" blue="0.1799943447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CC 2017 Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="HiN-Zq-hBv">
-                                <rect key="frame" x="33" y="250.5" width="309" height="186"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="HiN-Zq-hBv" secondAttribute="height" multiplier="278:167" id="7eO-Xw-1OU"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.31368762254714966" green="0.31374725699424744" blue="0.31368386745452881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HiN-Zq-hBv" secondAttribute="trailing" constant="33" id="4xa-o6-nHK"/>
-                            <constraint firstItem="HiN-Zq-hBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="UFO-rJ-eYm"/>
-                            <constraint firstItem="HiN-Zq-hBv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="W1z-bI-cIQ"/>
-                            <constraint firstItem="CY2-FO-rbE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hX5-Z5-AeU"/>
-                            <constraint firstItem="CY2-FO-rbE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="jBx-6m-S5C"/>
-                            <constraint firstItem="HiN-Zq-hBv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="v4N-G1-79Y"/>
+                            <constraint firstItem="CY2-FO-rbE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hX5-Z5-AeU"/>
+                            <constraint firstItem="CY2-FO-rbE" firstAttribute="top" secondItem="5d5-zI-T3H" secondAttribute="bottom" constant="88" id="jBx-6m-S5C"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -49,7 +41,4 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="CC 2017 Logo.png" width="3877" height="2459"/>
-    </resources>
 </document>
