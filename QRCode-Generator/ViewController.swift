@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var cycleNumberLabel: UILabel!
     @IBOutlet weak var QRImageView: UIImageView!
+    
     var QRCodeImage: CIImage!
     var firebase: DatabaseReference!
     var cycleNumber: Int!
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
         firebase = Database.database().reference()
         var QRCodeText: String!
         var QRCodeData: NSData!
+        
         self.firebase.child("QRCode").observe(.value, with: { (snap) in
             QRCodeText = snap.value as! String
             let cycleNumberIndex = QRCodeText.index(of: "|")
@@ -47,15 +49,13 @@ class ViewController: UIViewController {
         let transformedImage = QRCodeImage.transformed(by: CGAffineTransform(scaleX: scaleX, y: scaleY))
         
         QRImageView.image = UIImage(ciImage: transformedImage)
-        
-        
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
