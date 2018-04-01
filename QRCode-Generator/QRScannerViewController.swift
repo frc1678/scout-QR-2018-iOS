@@ -89,7 +89,9 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
         let firebaseKey = code.substring(to: pipeKey!)
         firebase!.child("TempQRTeamInMatchDatas").observeSingleEvent(of: .value, with: { (snap) in
             self.firebase!.child("TempQRTeamInMatchDatas").child("\(firebaseKey)").setValue("\(code)")
+            self.navigationController!.popViewController(animated: true)
         })
+        
     }
     
     override var prefersStatusBarHidden: Bool {
