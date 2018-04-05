@@ -21,23 +21,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firebase = Database.database().reference()
-        var QRCodeText: String!
         var QRCodeData: NSData!
         
         self.firebase.child("QRCode").observe(.value, with: { (snap) in
-            QRCodeText = snap.value as! String
-            let cycleNumberIndex = QRCodeText.index(of: "|")
-            self.cycleNumber = Int(QRCodeText.substring(to: cycleNumberIndex!))
-            QRCodeData = QRCodeText.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)! as NSData
-            
-            // Generating UIImage of QRCode
-            let filter = CIFilter(name: "CIQRCodeGenerator")
-            filter!.setValue(QRCodeData!, forKey: "inputMessage")
-            filter!.setValue("H", forKey: "inputCorrectionLevel")
-            
-            self.QRCodeImage = filter!.outputImage
-            self.cycleNumberLabel.text = "Cycle Number: \(self.cycleNumber!)"
-            self.displayQRCodeImage()
+            if let QRCodeText = snap.value as? String {
+                let cycleNumberIndex = QRCodeText.index(of: "|")
+                self.cycleNumber = Int(QRCodeText.substring(to: cycleNumberIndex!))
+                QRCodeData = QRCodeText.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)! as NSData
+                
+                // Generating UIImage of QRCode
+                let filter = CIFilter(name: "CIQRCodeGenerator")
+                filter!.setValue(QRCodeData!, forKey: "inputMessage")
+                filter!.setValue("H", forKey: "inputCorrectionLevel")
+                
+                self.QRCodeImage = filter!.outputImage
+                self.cycleNumberLabel.text = "Cycle Number: \(self.cycleNumber!)"
+                self.displayQRCodeImage()
+            } else {
+                self.QRImageView.image = nil
+                let noQRCodeAlert = UIAlertController(title: "No QR Code", message: "QR Code does not exist right now. Please wait for the app programmers to give you more information.", preferredStyle: .alert)
+                noQRCodeAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(noQRCodeAlert, animated: true, completion: nil)
+            }
         })
     }
     
