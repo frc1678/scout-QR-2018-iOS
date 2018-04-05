@@ -16,10 +16,10 @@
 		424E3D41206AA71E00C49E81 /* QRCode_GeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E3D40206AA71E00C49E81 /* QRCode_GeneratorTests.swift */; };
 		424E3D4C206AA71E00C49E81 /* QRCode_GeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E3D4B206AA71E00C49E81 /* QRCode_GeneratorUITests.swift */; };
 		424E3D5A206AABE400C49E81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 424E3D59206AABE400C49E81 /* GoogleService-Info.plist */; };
-		426354C6206AC09B0053EFE3 /* Photos for launch Screen in Resources */ = {isa = PBXBuildFile; fileRef = 426354C5206AC09A0053EFE3 /* Photos for launch Screen */; };
 		42C167A4206FF52800B55886 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C167A3206FF52800B55886 /* QRScannerViewController.swift */; };
 		4BB3C540C182D6839B160B7A /* Pods_QRCode_Generator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF133738E9353E7BF272B6A1 /* Pods_QRCode_Generator.framework */; };
 		526CB17615A14D55080B86D3 /* Pods_QRCode_GeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3CACA86F5B766CE9388C56 /* Pods_QRCode_GeneratorTests.framework */; };
+		5B92CDF32075BA3900F67E7D /* CC 2017 Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B92CDF22075BA3900F67E7D /* CC 2017 Logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +58,9 @@
 		424E3D4B206AA71E00C49E81 /* QRCode_GeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode_GeneratorUITests.swift; sourceTree = "<group>"; };
 		424E3D4D206AA71E00C49E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		424E3D59206AABE400C49E81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		426354C5206AC09A0053EFE3 /* Photos for launch Screen */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Photos for launch Screen"; sourceTree = "<group>"; };
 		42C167A3206FF52800B55886 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		4D3CACA86F5B766CE9388C56 /* Pods_QRCode_GeneratorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRCode_GeneratorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B92CDF22075BA3900F67E7D /* CC 2017 Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CC 2017 Logo.png"; sourceTree = "<group>"; };
 		61FB0E4D061BA41B49B02B6D /* Pods-QRCode-GeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCode-GeneratorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRCode-GeneratorUITests/Pods-QRCode-GeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		950F1F3D67BB95F6442BFE54 /* Pods_QRCode_GeneratorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRCode_GeneratorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B190822776F31C3B496CB0 /* Pods-QRCode-GeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCode-GeneratorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRCode-GeneratorTests/Pods-QRCode-GeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				424E3D59206AABE400C49E81 /* GoogleService-Info.plist */,
 				424E3D32206AA71E00C49E81 /* Assets.xcassets */,
 				424E3D37206AA71E00C49E81 /* Info.plist */,
-				426354C5206AC09A0053EFE3 /* Photos for launch Screen */,
+				5B92CDF22075BA3900F67E7D /* CC 2017 Logo.png */,
 			);
 			path = "QRCode-Generator";
 			sourceTree = "<group>";
@@ -292,9 +292,9 @@
 			files = (
 				424E3D5A206AABE400C49E81 /* GoogleService-Info.plist in Resources */,
 				424E3D36206AA71E00C49E81 /* LaunchScreen.storyboard in Resources */,
+				5B92CDF32075BA3900F67E7D /* CC 2017 Logo.png in Resources */,
 				424E3D33206AA71E00C49E81 /* Assets.xcassets in Resources */,
 				424E3D31206AA71E00C49E81 /* Main.storyboard in Resources */,
-				426354C6206AC09B0053EFE3 /* Photos for launch Screen in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
